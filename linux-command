@@ -4,9 +4,10 @@ mkdir -p gullu/tarun/{suman,gujjar,adhana/{haryana,faridabad,tigaon/{lehandola,m
 # scp secure copy paste
                                              -> scp copy.yml project.yml root@192.168.187.135:/root
 scp -r  recursivly using when send folder    -> scp -r joker pool root@192.168.187.137:/root
+
 scp -i  identity                             -> scp -i /root/.ssh/id_rsa /root/copy.yml root@192.168.187.137:/root
                                              -> scp-r -i /root/.ssh/id_rsa /root/joker root@192.168.187.137:/root
-scp -p  port 
+scp -P  port default port is 22         ->  scp -P 22 snap root@192.168.187.137:/root/
 scp -o option 
 
 # key generate 
