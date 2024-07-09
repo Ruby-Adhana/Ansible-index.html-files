@@ -1,6 +1,21 @@
 # mulitips inside Directory create command 
 mkdir -p gullu/tarun/{suman,gujjar,adhana/{haryana,faridabad,tigaon/{lehandola,mndh}}}
 
+# scp secure copy paste
+                                             -> scp copy.yml project.yml root@192.168.187.135:/root
+scp -r  recursivly using when send folder    -> scp -r joker pool root@192.168.187.137:/root
+scp -i  identity                             -> scp -i /root/.ssh/id_rsa /root/copy.yml root@192.168.187.137:/root
+                                             -> scp-r -i /root/.ssh/id_rsa /root/joker root@192.168.187.137:/root
+scp -p  port 
+scp -o option 
+
+# key generate 
+ssh-keygen
+ssh-copy-id root@192.168.187.135
+
+# loop shell command or playbook 
+"{{ range(1, 51) | map('regex_replace', '(.+)', 'user\\1') | list }}"   -> create 1to51 create any this but create in arrays ways [user1, user2, user3 user4]
+
 # Git 
 git config --global user.name "Ruby-Adhana"
 git config --global user.email "rubyadhana500@gmail.com"
@@ -11,5 +26,3 @@ git remote add origin <repo url>
 git push origin master
 git push origin master -f
 
-#shell command or playbook 
-"{{ range(1, 51) | map('regex_replace', '(.+)', 'user\\1') | list }}"   -> create 1to51 create any this but create in arrays ways [user1, user2, user3 user4]
