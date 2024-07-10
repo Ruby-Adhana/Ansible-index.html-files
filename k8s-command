@@ -1,0 +1,23 @@
+# pod create with multiple containers
+kind: Pod 
+apiVersion: v1 
+metadata: 
+   name: ruby-test                               <------pod name 
+spec: 
+   containers: 
+     - name: cont-ruby                           <--------container name 
+       image: ubuntu 
+       command: ["/bin/bash", "-c", "while true; do echo Hello-moto; sleep 5 ; done"] 
+   
+- name: cont-ruby                           <--------container name 
+       image: nginx 
+       command: ["/bin/bash", "-c", "while true; do echo Hello-moto; sleep 5 ; done"] 
+# depoly pod 
+kubectl apply -f pod1.yml
+# pod with ip
+kubectl get pods -o wide
+# all pods
+kubectl get pods 
+# enter in container 
+ kubectl exec -it ruby-test -c cont-ruby -- /bin/bash
+kubectl describe
