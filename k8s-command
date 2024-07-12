@@ -14,10 +14,15 @@ spec:
        command: ["/bin/bash", "-c", "while true; do echo Hello-moto; sleep 5 ; done"] 
 # depoly pod 
 kubectl apply -f pod1.yml
+
 # pod with ip
 kubectl get pods -o wide
+
 # all pods
 kubectl get pods 
+
 # enter in container 
  kubectl exec -it ruby-test -c cont-ruby -- /bin/bash
-kubectl describe
+
+kubectl describe pod <pod-name>
+kubectl delete -f pod1.yml
