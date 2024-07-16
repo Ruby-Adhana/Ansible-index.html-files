@@ -45,6 +45,16 @@ root@Ubuntu1111:~# tcpdump -c 10 -w ruby.txt      <----save 10 packet in file
 root@Ubuntu1111:~# tcpdump -c 10 > ruby.txt       <---- save in file
 root@Ubuntu1111:~# tcpdump -c 10 >> ruby.txt      <----append
 
+# journalctl  show all system logs  
+/etc/systmd/
+root@Ubuntu1111:~# cd /etc/systmd/
+root@Ubuntu1111:~# cat journald.conf
+root@Ubuntu1111:~# journalctl
+root@Ubuntu1111:~# journalctl --no-pager
+root@Ubuntu1111:~# journalctl --no-pager > file.txt
+root@Ubuntu1111:~# journalctl --since yesterday 
+root@Ubuntu1111:~# journalctl --since yesterday -o json-pretty      <---all logs human readable
+
 # Git 
 git config --global user.name "Ruby-Adhana"
 git config --global user.email "rubyadhana500@gmail.com"
