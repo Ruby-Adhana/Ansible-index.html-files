@@ -17,6 +17,34 @@ ssh-copy-id root@192.168.187.135
 # loop shell command or playbook 
 "{{ range(1, 51) | map('regex_replace', '(.+)', 'user\\1') | list }}"   -> create 1to51 create any this but create in arrays ways [user1, user2, user3 user4]
 
+# running process list
+ps aux
+pstree 
+ps -f -u syslog
+
+              # encode and deecode
+     # encode
+root@Ubuntu1111:~# echo ruby | base64
+cnVieQo=
+      # decode
+root@Ubuntu1111:~# echo cnVieQo= | base64 --decode
+ruby
+
+# head : genrally using for configuration file
+head ruby.txt 
+# tail : using for check logs
+tail ruby.txt
+
+# networking tcp record all this network all 
+tcpdump
+root@Ubuntu1111:~# tcpdump
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on ens33, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+root@Ubuntu1111:~# tcpdump -c 10   <---- show only 10 
+root@Ubuntu1111:~# tcpdump -c 10 -w ruby.txt      <----save 10 packet in file
+root@Ubuntu1111:~# tcpdump -c 10 > ruby.txt       <---- save in file
+root@Ubuntu1111:~# tcpdump -c 10 >> ruby.txt      <----append
+
 # Git 
 git config --global user.name "Ruby-Adhana"
 git config --global user.email "rubyadhana500@gmail.com"
