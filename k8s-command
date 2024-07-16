@@ -27,3 +27,9 @@ kubectl get pods
 
 kubectl describe pod <pod-name>
 kubectl delete -f pod1.yml
+
+# crictl use for direct communicate with container or containerd
+crictl logs
+crictl logs 8956745a5685
+crictl logs db8956745a5685
+crictl pods
